@@ -23,9 +23,17 @@ function merge(arr1, arr2) {
             sortedArr.push(arr2[j]);
             j++;
         } else {
-            sortedArr.push(arr1[i]);
-            i++;
+            sortedArr.push(arr1[i])
+            i++
+        }
+        if (i === arr1.length && j < arr2.length) {
+            const newArr2 = arr2.slice(j);
+            sortedArr.push(...newArr2);
         }
     }
     return sortedArr;
 }
+
+const arrA = [1, 2, 3, 40];
+const arrB = [2, 4, 90];
+console.log(merge(arrA, arrB));
