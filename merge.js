@@ -31,6 +31,6 @@ function merge(arr1, arr2) {
     return sortedArr;
 }
 
-const arrA = [1, 40, 19, 32, 891, 16];
+const arrA = [48, 32];
 
 console.log(mergeSort(arrA));
